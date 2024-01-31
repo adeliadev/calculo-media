@@ -27,30 +27,30 @@ naf = 5
 naf_calc = (m + naf) / 2
 
 # says the result based on the students final grade
-def studentSituation():
+def student_situation():
     table['Situação'] = 'Aprovado'
 
     table.loc[(m < naf), 'Situação'] = 'Reprovado'
 
     table.loc[(m < approved) & (m >= naf), 'Situação'] = 'Exame Final'
-studentSituation()
+student_situation()
 
 # calcula as faltas e diz se o aluno foi reprovado por falta ou não
-def failedAttendance():
+def failed_attendance():
     semester_classes = 60
     missed_classes_limit = 0.25 * semester_classes
 
     table.loc[table['Faltas'] > missed_classes_limit, 'Situação'] = 'Reprovado por Falta'
 
-failedAttendance()
+failed_attendance()
 
 # calculates the points the student needs in the final exam
-def finalExamCalc():
+def final_exam_calc():
     table.loc[(table['Situação'] == 'Exame Final'), 'Nota para Aprovação Final'] = approved - m.round()
 
     table.loc[(table['Situação'] == 'Aprovado') | (table['Situação'] == 'Reprovado') | (table['Situação'] == 'Reprovado por Falta'), 'Nota para Aprovação Final'] = 0
 
-finalExamCalc()
+final_exam_calc()
 
 print('\n=== Updated Table ===\n')
 print(table)
