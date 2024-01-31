@@ -35,7 +35,7 @@ def student_situation():
     table.loc[(m < approved) & (m >= naf), 'Situação'] = 'Exame Final'
 student_situation()
 
-# calcula as faltas e diz se o aluno foi reprovado por falta ou não
+# calculate the student attendance to the classes and gives the result
 def failed_attendance():
     semester_classes = 60
     missed_classes_limit = 0.25 * semester_classes
