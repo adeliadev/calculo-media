@@ -1,7 +1,7 @@
-# 📝 Dev Training - Desafio de programação
+# 📝 Desafio de programação
 ## Cálculo de média
 
-> Desafio criado pela Dev training em seu processo seletivo, o desafio consiste em calcular a média  de alunos de uma planilha no excel e dar um dos 4 resultados:
+> Esse desafio consiste em calcular a média de alunos de uma planilha no excel e dar um dos 4 resultados:
 > <ul>
  > <li>Aprovado</li>
  > <li>Reprovado</li>
